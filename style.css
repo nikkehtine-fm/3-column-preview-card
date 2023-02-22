@@ -39,6 +39,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 100px;
+  border: 2px white;
+}
+
 .sedan {
   background-color: var(--clr-b-orange);
 }
@@ -52,9 +59,12 @@ a {
 }
 
 .attribution {
+  background-color: var(--clr-d-cyan);
   font-size: 11px;
   text-align: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--clr-b-orange);
 }

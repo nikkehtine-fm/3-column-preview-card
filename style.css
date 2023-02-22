@@ -43,7 +43,18 @@ button {
   cursor: pointer;
   background-color: white;
   border-radius: 100px;
-  border: 2px white;
+  border: 2px solid white;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+button:hover {
+  background-color: inherit;
+  color: white;
 }
 
 .sedan {

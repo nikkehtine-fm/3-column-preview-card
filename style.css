@@ -27,12 +27,27 @@ body {
   color: var(--clr-tr-white);
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
+}
+
+section {
+  max-width: 200px;
+  position: relative;
+  padding: 3rem;
+  height: 25rem;
+}
+
 h2 {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
+  margin-block: 1.5rem;
 }
 
 a {
@@ -40,16 +55,40 @@ a {
 }
 
 button {
+  display: block;
   cursor: pointer;
+  position: absolute;
+  bottom: 2.5rem;
   background-color: white;
   border-radius: 100px;
   border: 2px solid white;
-  padding-inline: 2rem;
-  padding-block: 1rem;
+  padding-inline: 1.75rem;
+  padding-block: 0.8rem;
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   font-weight: 400;
   text-transform: capitalize;
+}
+
+.sedan {
+  background-color: var(--clr-b-orange);
+}
+.sedan > button {
+  color: var(--clr-b-orange);
+}
+
+.suv {
+  background-color: var(--clr-d-cyan);
+}
+.suv > button {
+  color: var(--clr-d-cyan);
+}
+
+.luxury {
+  background-color: var(--clr-vd-cyan);
+}
+.luxury > button {
+  color: var(--clr-vd-cyan);
 }
 
 button:hover {
@@ -57,19 +96,9 @@ button:hover {
   color: white;
 }
 
-.sedan {
-  background-color: var(--clr-b-orange);
-}
-
-.suv {
-  background-color: var(--clr-d-cyan);
-}
-
-.luxury {
-  background-color: var(--clr-vd-cyan);
-}
-
 .attribution {
+  position: absolute;
+  bottom: 1rem;
   background-color: var(--clr-d-cyan);
   font-size: 11px;
   text-align: center;
@@ -78,4 +107,15 @@ button:hover {
 }
 .attribution a {
   color: var(--clr-b-orange);
+}
+
+@media (max-aspect-ratio: 4/5) {
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    max-width: 50dvw;
+    min-width: 300px;
+  }
 }

@@ -25,29 +25,35 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: var(--clr-tr-white);
+  line-height: 1.75;
 }
 
 main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin: 2rem;
+  justify-content: space-around;
+  margin: 6rem 2rem;
 }
 
 section {
-  max-width: 200px;
-  position: relative;
+  max-width: 212px;
   padding: 3rem;
-  height: 25rem;
+}
+
+section:first-of-type {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+section:last-of-type {
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 h2 {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
-  margin-block: 1.5rem;
+  margin-block: 1rem;
 }
 
 a {
@@ -57,8 +63,7 @@ a {
 button {
   display: block;
   cursor: pointer;
-  position: absolute;
-  bottom: 2.5rem;
+  margin-top: 4.25rem;
   background-color: white;
   border-radius: 100px;
   border: 2px solid white;
@@ -96,8 +101,25 @@ button:hover {
   color: white;
 }
 
+@media (max-width: 790px) {
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    max-width: 250px;
+  }
+
+  section:first-of-type {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  section:last-of-type {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
 .attribution {
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   background-color: var(--clr-d-cyan);
   font-size: 11px;
@@ -107,15 +129,4 @@ button:hover {
 }
 .attribution a {
   color: var(--clr-b-orange);
-}
-
-@media (max-aspect-ratio: 4/5) {
-  main {
-    flex-direction: column;
-  }
-
-  section {
-    max-width: 50dvw;
-    min-width: 300px;
-  }
 }
